@@ -12,6 +12,7 @@ let button6 = document.getElementById('6');
 let button7 = document.getElementById('7');
 let button8 = document.getElementById('8');
 let button9 = document.getElementById('9');
+let buttonDot = document.getElementById('dot');
 
 let buttonPlus = document.getElementById('plus');
 let buttonMinus = document.getElementById('minus');
@@ -74,6 +75,11 @@ button8.onclick = function clickingFunc() {
 //9
 button9.onclick = function clickingFunc() {
     inputField.defaultValue += button9.textContent
+};
+
+//Dot
+buttonDot.onclick = function clickingFunc() {
+    inputField.defaultValue += buttonDot.textContent
 };
 
 
