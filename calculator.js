@@ -139,6 +139,8 @@ buttonEqual.onclick = function() {
         answerField.textContent = ``;
     };
 
-    console.log(calculate);
+    if (calculate == Infinity){
+        answerField.textContent = `∞`;
+    };
 
 }
