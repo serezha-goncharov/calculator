@@ -4,80 +4,100 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src='calculator.js' defer></script>
   <title>Calculator</title>
 </head>
 <body>
-  <h1>Calculator 2000</h1>
-  <input value="" id="input" type="text" class="input__field" placeholder="Input">
-  <button id="backspace" class="backspace">←</button>
-  <button id="clear" class="clear">х</button>
-  <p id="answer">Result:</p>
-  <table class="numbers">
-    <tbody>
+  <div class="calculator">
+    <div class="intro">
+      <div class="intro__beforeheading">
+        <div class="intro__header">
+          <h1>Calculator</h1>
+        </div>
+      </div>
+      <div class="intro__input_and_result">
+        <div id="input" class="input__field"></div>
+        <div id="answer" class="input__result"></div>
+      </div>
+    </div>
+    <table class="table">
+      <tbody class="table__buttons">
         <tr>
-          <td>
-            <button id="1" type="number" class="number" value="1">1</button>
+          <td class="cell__number">
+            <div id="left_skoba" class="actions number">(</div>
           </td>
-          <td>
-            <button id="2" type="number" class="number" value="2">2</button>
+          <td class="cell__number">
+            <div id="right_skoba" class="actions number">)</div>
           </td>
-          <td>
-            <button id="3" type="number" class="number" value="3">3</button>
+          <td class="cell__number">            
+            <div id="clear" class="actions number">х</div>
+          </td>
+          <td class="cell__number">
+            <div id="backspace" class="actions number">←</div>
           </td>
         </tr>
         <tr>
-          <td>
-            <button id="4" type="number" class="number" value="4">4</button>
+          <td class="cell__number">
+            <div id="7" type="number" class="number" value="7">7</div>
           </td>
-          <td>
-            <button id="5" type="number" class="number" value="5">5</button>
+          <td class="cell__number">
+            <div id="8" type="number" class="number" value="8">8</div>
           </td>
-          <td>
-            <button id="6" type="number" class="number" value="6">6</button>
+          <td class="cell__number">
+            <div id="9" type="number" class="number" value="9">9</div>
           </td>
-        </tr>
-        <tr>
-          <td>
-            <button id="7" type="number" class="number" value="7">7</button>
-          </td>
-          <td>
-            <button id="8" type="number" class="number" value="8">8</button>
-          </td>
-          <td>
-            <button id="9" type="number" class="number" value="9">9</button>
+          <td class="cell__number">
+            <div id="plus" class="actions number">+</div>
           </td>
         </tr>
         <tr>
-          <td></td>
-          <td>
-            <button id="0" type="number" class="number" value="0">0</button>
+          <td class="cell__number">
+            <div id="4" type="number" class="number" value="4">4</div>
           </td>
-          <td><button id="dot" type="number" class="number" value=".">.</button>
+          <td class="cell__number">
+            <div id="5" type="number" class="number" value="5">5</div>
+          </td>
+          <td class="cell__number">
+            <div id="6" type="number" class="number" value="6">6</div>
+          </td>
+          <td class="cell__number">
+            <div id="minus" class="actions number">-</div>
           </td>
         </tr>
-    </tbody>
-  </table>
-  <p></p>
-  <table class="actions">
-    <tbody>
-      <td>
-        <button id="plus">+</button>
-      </td>
-      <td>
-        <button id="minus">-</button>
-      </td>
-      <td>
-        <button id="multiply">*</button>
-      </td>
-      <td>
-        <button id="divide">/</button>
-      </td>
-      <td>
-        <button id="equal">=</button>
-      </td>
-    </tbody>
-  </table>
+        <tr>
+          <td class="cell__number">
+            <div id="1" type="number" class="number" value="1">1</div>
+          </td>
+          <td class="cell__number">
+            <div id="2" type="number" class="number" value="2">2</div>
+          </td>
+          <td class="cell__number">
+            <div id="3" type="number" class="number" value="3">3</div>
+          </td>
+          <td class="cell__number">
+            <div id="multiply" class="actions number">*</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="cell__number">
+            <div id="0" type="number" class="number" value="0">0</div>
+          </td>
+          <td class="cell__number">
+            <div id="dot" type="number" class="number" value=".">.</div>
+          </td>
+          <td class="cell__number">
+            <div id="equal" class="number">=</div>
+          </td>
+          <td class="cell__number">
+            <div id="divide" class="actions number">/</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>

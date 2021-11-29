@@ -13,6 +13,8 @@ let button7 = document.getElementById('7');
 let button8 = document.getElementById('8');
 let button9 = document.getElementById('9');
 let buttonDot = document.getElementById('dot');
+let buttonLeftSkoba = document.getElementById('left_skoba');
+let buttonRightSkoba = document.getElementById('right_skoba');
 
 let buttonPlus = document.getElementById('plus');
 let buttonMinus = document.getElementById('minus');
@@ -29,102 +31,114 @@ let answerField = document.getElementById('answer');
 //Нажатие на кнопки с цифрами отобразит соответствующую цифуру в поле "Ввод"
 //0
 button0.onclick = function clickingFunc() {
-        inputField.defaultValue += button0.textContent
+    inputField.textContent += '0'
 };
 
 //1
 button1.onclick = function clickingFunc() {
-    inputField.defaultValue += button1.textContent
+    inputField.textContent += '1'
 };
 
 //2
 button2.onclick = function clickingFunc() {
-    inputField.defaultValue += button2.textContent
+    inputField.textContent += '2'
 };
 
 //3
 button3.onclick = function clickingFunc() {
-    inputField.defaultValue += button3.textContent
+    inputField.textContent += '3'
 };
 
 //4
 button4.onclick = function clickingFunc() {
-    inputField.defaultValue += button4.textContent
+    inputField.textContent += '4'
 };
 
 //5
 button5.onclick = function clickingFunc() {
-    inputField.defaultValue += button5.textContent
+    inputField.textContent += '5'
 };
 
 //6
 button6.onclick = function clickingFunc() {
-    inputField.defaultValue += button6.textContent
+    inputField.textContent += '6'
 };
 
 //7
 button7.onclick = function clickingFunc() {
-    inputField.defaultValue += button7.textContent
+    inputField.textContent += '7'
 };
 
 //8
 button8.onclick = function clickingFunc() {
-    inputField.defaultValue += button8.textContent
+    inputField.textContent += '8'
 };
 
 //9
 button9.onclick = function clickingFunc() {
-    inputField.defaultValue += button9.textContent
+    inputField.textContent += '9'
 };
 
 //Dot
 buttonDot.onclick = function clickingFunc() {
-    inputField.defaultValue += buttonDot.textContent
+    inputField.textContent += '.'
+};
+
+//LeftSkoba
+buttonLeftSkoba.onclick = function clickingFunc() {
+    inputField.textContent += '('
+};
+
+//Right Skoba
+buttonRightSkoba.onclick = function clickingFunc() {
+    inputField.textContent += ')'
 };
 
 
 //Нажатие на кнопку с матем-им действием
 // "+"
 buttonPlus.onclick = function clickingFunc() {
-    inputField.defaultValue += buttonPlus.textContent
+    inputField.textContent += '+'
 };
 
 // "-"
 buttonMinus.onclick = function clickingFunc() {
-    inputField.defaultValue += buttonMinus.textContent
+    inputField.textContent += '-'
 };
 
 // "*"
 buttonMultiply.onclick = function clickingFunc() {
-    inputField.defaultValue += buttonMultiply.textContent
+    inputField.textContent += '*'
 };
 
 // "/"
 buttonDivide.onclick = function clickingFunc() {
-    inputField.defaultValue += buttonDivide.textContent
+    inputField.textContent += '/'
 };
 
 
 //Кнопка очистки поля "Ввод"
 buttonClear.onclick = function clickingFunc() {
-    inputField.defaultValue = ''
-    answerField.textContent = `Result: `
+    inputField.textContent = ''
+    answerField.textContent = ``
 };
 
 
 //Кнопка стирания по одному символу в поле "Ввод"
 buttonBackspace.onclick = function() {
-    inputField.defaultValue = inputField.defaultValue.substring(0,inputField.defaultValue.length -1);
+    inputField.textContent = inputField.textContent.substring(0,inputField.textContent.length -1);
 }
 
 //Кнопка вычисления результата
 buttonEqual.onclick = function() {
-    let inputValue = inputField.value
+    let inputValue = inputField.textContent;
     let calculate = eval(inputValue);
-    answerField.textContent = `Result: ${calculate}`;
+    answerField.textContent = `${calculate}`;
 
     if (calculate == undefined){
-        answerField.textContent = `Input field is empty`;
+        answerField.textContent = ``;
     };
+
+    console.log(calculate);
 
 }
