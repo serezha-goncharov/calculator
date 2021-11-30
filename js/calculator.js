@@ -27,72 +27,149 @@ let buttonEqual = document.getElementById('equal');
 
 let answerField = document.getElementById('answer');
 
-
-//Нажатие на кнопки с цифрами отобразит соответствующую цифуру в поле "Ввод"
+//Нажатие на кнопки с цифрами отобразит соответствующую цифуру в поле "Ввод" + клавиатура
 //0
 button0.onclick = function clickingFunc() {
     inputField.textContent += '0'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "0"){
+        button0.click();
+    } 
+});
 
 //1
 button1.onclick = function clickingFunc() {
     inputField.textContent += '1'
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "1"){
+        button1.click();
+    } 
+});
+
 //2
 button2.onclick = function clickingFunc() {
     inputField.textContent += '2'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "2"){
+        button2.click();
+    } 
+});
 
 //3
 button3.onclick = function clickingFunc() {
     inputField.textContent += '3'
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "3"){
+        button3.click();
+    } 
+});
+
 //4
 button4.onclick = function clickingFunc() {
     inputField.textContent += '4'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "4"){
+        button4.click();
+    } 
+});
 
 //5
 button5.onclick = function clickingFunc() {
     inputField.textContent += '5'
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "5"){
+        button5.click();
+    } 
+});
+
 //6
 button6.onclick = function clickingFunc() {
     inputField.textContent += '6'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "6"){
+        button6.click();
+    } 
+});
 
 //7
 button7.onclick = function clickingFunc() {
     inputField.textContent += '7'
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "7"){
+        button7.click();
+    } 
+});
+
 //8
 button8.onclick = function clickingFunc() {
     inputField.textContent += '8'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "8"){
+        button8.click();
+    } 
+});
 
 //9
 button9.onclick = function clickingFunc() {
     inputField.textContent += '9'
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "9"){
+        button9.click();
+    } 
+});
+
 //Dot
 buttonDot.onclick = function clickingFunc() {
     inputField.textContent += '.'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "."){
+        buttonDot.click();
+    } 
+});
 
 //LeftSkoba
 buttonLeftSkoba.onclick = function clickingFunc() {
     inputField.textContent += '('
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.shiftKey && event.code === "Digit9"){
+        buttonLeftSkoba.click();
+    } 
+});
+
 //Right Skoba
 buttonRightSkoba.onclick = function clickingFunc() {
     inputField.textContent += ')'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.shiftKey && event.code === "Digit0"){
+        buttonRightSkoba.click();
+    } 
+});
 
 
 //Нажатие на кнопку с матем-им действием
@@ -101,20 +178,44 @@ buttonPlus.onclick = function clickingFunc() {
     inputField.textContent += '+'
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "+"){
+        buttonPlus.click();
+    } 
+});
+
 // "-"
 buttonMinus.onclick = function clickingFunc() {
     inputField.textContent += '-'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "-"){
+        buttonMinus.click();
+    } 
+});
 
 // "*"
 buttonMultiply.onclick = function clickingFunc() {
     inputField.textContent += '*'
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "*"){
+        buttonMultiply.click();
+    } 
+});
+
 // "/"
 buttonDivide.onclick = function clickingFunc() {
     inputField.textContent += '/'
 };
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "/"){
+        buttonDivide.click();
+    } 
+});
 
 
 //Кнопка очистки поля "Ввод"
@@ -123,11 +224,23 @@ buttonClear.onclick = function clickingFunc() {
     answerField.textContent = ``
 };
 
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "Escape"){
+        buttonClear.click();
+    } 
+});
+
 
 //Кнопка стирания по одному символу в поле "Ввод"
 buttonBackspace.onclick = function() {
     inputField.textContent = inputField.textContent.substring(0,inputField.textContent.length -1);
 }
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "Backspace"){
+        buttonBackspace.click();
+    } 
+});
 
 //Кнопка вычисления результата
 buttonEqual.onclick = function() {
@@ -152,4 +265,10 @@ buttonEqual.onclick = function() {
         answerField.textContent = ``;
     };
 
-}
+};
+
+document.addEventListener("keydown", function keyPressing (event) {
+    if(event.key === "Enter"){
+        buttonEqual.click();
+    } 
+});
