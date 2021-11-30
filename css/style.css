@@ -1,5 +1,5 @@
 body{
-    background-color: #002B4A;
+    background-color: #001E34;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 25px;
     font-weight: 700;
@@ -18,7 +18,7 @@ body{
 
 .calculator{
     width:380px;
-    background-color: #002B4A;
+    background-color: #001E34;
     margin: 0 auto;
 }
 
@@ -47,9 +47,9 @@ body{
 
 .input__field{
     text-align: right;
-    background-color: #002B4A;
+    background-color: #001E34;
     color: #EFEFEF;
-    border-color: #002B4A;
+    border-color: #001E34;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 30px;
     height: 39.2px;
@@ -79,15 +79,15 @@ body{
 .number{
     width: 95px;
     height: 70px;
-    background-color: #13466B;
+    background-color: #002B4A;
     color: #fff;
-    line-height: 70px;
-    border: 2px solid #002B4A;
+    line-height: 67px;
+    border: 2px solid #001E34;
     transition:  background-color 0.1s linear, border 0.1s linear;
 }
 
 .number:hover{
-    background-color: #24699b;
+    background-color: #13466B;
     border: 2px solid #FFA800;
 }
 
@@ -103,5 +103,9 @@ body{
 
 .actions{
     color: #FFA800;
+}
 
+.backspace__img{
+    margin: 5px 10px 10px 10px;
+    vertical-align: middle;
 }
