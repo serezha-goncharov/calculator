@@ -133,8 +133,7 @@ buttonBackspace.onclick = function() {
 buttonEqual.onclick = function() {
     let inputValue = inputField.textContent;
     let calculate = eval(inputValue);
-    let calculate_new = (Number(calculate)).toFixed(3);
-    answerField.textContent = `${calculate_new}`;
+    answerField.textContent = `${calculate}`;
 
     if (calculate == undefined){
         answerField.textContent = ``;
@@ -143,5 +142,10 @@ buttonEqual.onclick = function() {
     if (calculate == Infinity){
         answerField.textContent = `∞`;
     };
+
+    if(Number.isInteger(calculate) == false){
+        let calculate_new = (Number(calculate)).toFixed(2);
+        answerField.textContent = `${calculate_new}`;
+    }
 
 }
