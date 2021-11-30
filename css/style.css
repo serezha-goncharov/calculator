@@ -9,6 +9,7 @@ body{
 :before,
 :after{
     box-sizing: border-box;
+    user-select: none;
 }
 
 .intro{
@@ -81,7 +82,7 @@ body{
     height: 70px;
     background-color: #002B4A;
     color: #fff;
-    line-height: 67px;
+    line-height: 65px;
     border: 2px solid #001E34;
     transition:  background-color 0.1s linear, border 0.1s linear;
 }
@@ -92,6 +93,7 @@ body{
 }
 
 #equal{
+    font-size: 35px;
     background-color: #FFA800;
     transition:  border 0.1s linear;
 
@@ -102,6 +104,7 @@ body{
 }
 
 .actions{
+    font-size: 33px;
     color: #FFA800;
 }
 
