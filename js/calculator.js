@@ -148,4 +148,8 @@ buttonEqual.onclick = function() {
         answerField.textContent = `${calculate_new}`;
     }
 
+    if (isNaN(calculate) == true){
+        answerField.textContent = ``;
+    };
+
 }
