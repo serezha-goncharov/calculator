@@ -30,7 +30,7 @@ let answerField = document.getElementById('answer');
 //Нажатие на кнопки с цифрами отобразит соответствующую цифуру в поле "Ввод" + клавиатура
 //0
 button0.onclick = function clickingFunc() {
-    inputField.textContent += '0'
+    inputField.defaultValue += '0'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -41,7 +41,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //1
 button1.onclick = function clickingFunc() {
-    inputField.textContent += '1'
+    inputField.defaultValue += '1'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -52,7 +52,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //2
 button2.onclick = function clickingFunc() {
-    inputField.textContent += '2'
+    inputField.defaultValue += '2'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -63,7 +63,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //3
 button3.onclick = function clickingFunc() {
-    inputField.textContent += '3'
+    inputField.defaultValue += '3'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -74,7 +74,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //4
 button4.onclick = function clickingFunc() {
-    inputField.textContent += '4'
+    inputField.defaultValue += '4'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -85,7 +85,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //5
 button5.onclick = function clickingFunc() {
-    inputField.textContent += '5'
+    inputField.defaultValue += '5'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -96,7 +96,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //6
 button6.onclick = function clickingFunc() {
-    inputField.textContent += '6'
+    inputField.defaultValue += '6'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -107,7 +107,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //7
 button7.onclick = function clickingFunc() {
-    inputField.textContent += '7'
+    inputField.defaultValue += '7'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -118,7 +118,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //8
 button8.onclick = function clickingFunc() {
-    inputField.textContent += '8'
+    inputField.defaultValue += '8'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -129,7 +129,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //9
 button9.onclick = function clickingFunc() {
-    inputField.textContent += '9'
+    inputField.defaultValue += '9'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -140,7 +140,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //Dot
 buttonDot.onclick = function clickingFunc() {
-    inputField.textContent += '.'
+    inputField.defaultValue += '.'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -151,7 +151,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //LeftSkoba
 buttonLeftSkoba.onclick = function clickingFunc() {
-    inputField.textContent += '('
+    inputField.defaultValue += '('
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -162,7 +162,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //Right Skoba
 buttonRightSkoba.onclick = function clickingFunc() {
-    inputField.textContent += ')'
+    inputField.defaultValue += ')'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -175,7 +175,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 //Нажатие на кнопку с матем-им действием
 // "+"
 buttonPlus.onclick = function clickingFunc() {
-    inputField.textContent += '+'
+    inputField.defaultValue += '+'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -186,7 +186,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 // "-"
 buttonMinus.onclick = function clickingFunc() {
-    inputField.textContent += '-'
+    inputField.defaultValue += '-'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -197,7 +197,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 // "*"
 buttonMultiply.onclick = function clickingFunc() {
-    inputField.textContent += '*'
+    inputField.defaultValue += '*'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -208,7 +208,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 // "/"
 buttonDivide.onclick = function clickingFunc() {
-    inputField.textContent += '/'
+    inputField.defaultValue += '/'
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -220,8 +220,8 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //Кнопка очистки поля "Ввод"
 buttonClear.onclick = function clickingFunc() {
-    inputField.textContent = ''
-    answerField.textContent = ``
+    inputField.defaultValue = ''
+    answerField.textContent = ''
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -233,7 +233,7 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //Кнопка стирания по одному символу в поле "Ввод"
 buttonBackspace.onclick = function() {
-    inputField.textContent = inputField.textContent.substring(0,inputField.textContent.length -1);
+    inputField.defaultValue = inputField.defaultValue.substring(0,inputField.defaultValue.length -1);
 }
 
 document.addEventListener("keydown", function keyPressing (event) {
@@ -244,27 +244,26 @@ document.addEventListener("keydown", function keyPressing (event) {
 
 //Кнопка вычисления результата
 buttonEqual.onclick = function() {
-    let inputValue = inputField.textContent;
+    let inputValue = inputField.defaultValue;
     let calculate = eval(inputValue);
     answerField.textContent = `${calculate}`;
-
-    if (calculate == undefined){
+    //Проверка на пустое значение
+    if (calculate === undefined){
         answerField.textContent = ``;
-    };
-
-    if (calculate == Infinity){
-        answerField.textContent = `∞`;
-    };
-
-    if(Number.isInteger(calculate) == false){
-        let calculate_new = (Number(calculate)).toFixed(2);
-        answerField.textContent = `${calculate_new}`;
-    }
-
-    if (isNaN(calculate) == true){
+    //Проверка на +∞
+    }else if (calculate == Number.POSITIVE_INFINITY){
+        answerField.textContent = `+∞`;
+    //Проверка на -∞
+    }else if (calculate == Number.NEGATIVE_INFINITY){
+        answerField.textContent = `-∞`;
+    //Проверка на округление дробного числа
+    }else if(Number.isInteger(calculate) == false){
+    let calculateFloat = (Number(calculate)).toFixed(2);
+    answerField.textContent = `${calculateFloat}`;
+    //Проверка на NaN
+    }else if (isNaN(calculate) == true){
         answerField.textContent = ``;
-    };
-
+        };
 };
 
 document.addEventListener("keydown", function keyPressing (event) {
